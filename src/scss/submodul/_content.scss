@@ -1,0 +1,120 @@
+@use './mixinModule/mixin' as m;
+@use './fontColor' as c;
+
+
+.content {
+    @include m.centerDiv(flex-start);
+    width: 100%;
+    height: 80vh;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 1px solid black;
+    background-color: c.$color2;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    flex-wrap: wrap;
+
+    .introduction {
+        // border: 1px solid white;
+        padding: 10px 40px;
+        width: 100%;
+        font-family: c.$font2;
+        font-weight: 300;
+        @include m.centerDiv(flex-start, none, column);
+        // flex-direction: column;
+        gap: 10px;
+
+        .i-title {
+            @include m.centerDiv(flex-start);
+            font-size: 3rem;
+            flex-wrap: wrap;
+            min-width: auto;
+            min-height: max-content;
+
+            span {
+                padding: 5px;
+                margin-left: 5px;
+                background-color: white;
+                color: c.$color2;
+            }
+
+        }
+
+        .garis {
+            background-color: white;
+            border: none;
+            height: 2px;
+        }
+
+        .wrapper-i-b {
+            @include m.centerDiv(flex-start);
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .iDescription {
+                font-size: 18px;
+                font-family: c.$font;
+            }
+
+            .iButton {
+                border: 1px solid white;
+                width: max-content;
+                padding: 10px 20px;
+                text-decoration: none;
+                font-size: 14px;
+                font-family: c.$font;
+                color: white;
+                text-transform: uppercase;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    border-color: c.$color1;
+                    color: c.$color1;
+                }
+            }
+        }
+    }
+}
+
+.content2 {
+    border: none;
+
+    .center {
+        @include m.centerDiv();
+    }
+
+    .container-content2 {
+        @include m.centerDiv(flex-start, center);
+        flex-wrap: wrap;
+        .card1 {
+            width: 45%;
+            @include m.heightDiv();
+           background-color: rgba(0, 189, 252);
+           transition: all 0.2s ease-in;
+           &:hover {
+               background:linear-gradient(blue,black);
+            }
+        }
+        .card2 {
+            width: 55%;
+            @include m.heightDiv();
+            background-color: lightcoral;
+        }
+        .card3 {
+            width: 55%;
+            @include m.heightDiv();
+            background-color: lightgreen;
+        }
+        .card4 {
+            width: 45%;
+            @include m.heightDiv();
+            background-color: lightseagreen;
+        }
+        .card5 {
+            width: 100%;
+            @include m.heightDiv();
+            background-color: lightslategrey;
+        }
+
+    }
+}

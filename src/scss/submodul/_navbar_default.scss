@@ -1,0 +1,124 @@
+@use './mixinModule/mixin' as m;
+@use 'fontColor' as c;
+
+
+
+
+*,
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    ::selection{
+        background-color: c.$color2;
+        color: white;
+    }
+}
+
+.container {
+    height: auto;
+}
+.navbar{
+    transition: all 0.3s ease-in-out;
+}
+.nav-default {
+    @include m.centerDiv(space-between);
+    padding: 5px 20px;
+    flex-wrap: wrap;
+    padding: 5px;
+    flex-wrap: wrap;
+    width: 100%;
+    transition: all 0.3s ease-in-out !important;
+    .navbar-brand {
+        @include m.centerDiv(space-around);
+        width: 100px;
+        padding: 5px;
+        cursor: pointer;
+        i {
+            font-size: 2rem;
+            color: c.$color1;
+        }
+
+        .navbar-title {
+            @include m.settingFont(1.5rem);
+        }
+    }
+
+    ul {
+        @include m.centerDiv();
+        width: max-content;
+        position: relative;
+        flex-wrap: wrap;
+
+        li {
+            margin: 0 10px;
+            list-style-type: none;
+            padding: 5px 10px;
+
+            a {
+                font-size: 1rem;
+                font-family:c.$font;
+                text-decoration: none;
+                color: black;
+                text-align: center;
+
+                span {
+                    width: 70px;
+                    display: block;
+
+                    &:hover {
+                        transition: all 0.3s ease-in-out;
+                        transform: translateY(-25px);
+                        display: block;
+                        // opacity: 0;
+                        visibility: hidden;
+                    }
+
+                    &::before {
+                        content: attr(data-hover);
+                        display: block;
+                        position: absolute;
+                        transform: translateY(25px);
+                        opacity: 0;
+                        text-align: center;
+                        width: 70px;
+                        color: c.$color1;
+                        font-weight: 600;
+                    }
+
+                    &:hover::before {
+                        transform: translateY(25px);
+                        visibility: visible;
+                        position: absolute;
+                        transition: all 0.3s ease-in-out;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    .color-mode {
+        @include m.centerDiv();
+        gap: 0 5px;
+        width: max-content;
+        padding: 5px;
+        cursor: pointer;
+        i {
+            font-size: 1.5rem;
+        }
+
+        .color-title {
+            @include m.settingFont(1rem);
+        }
+    }
+}
+.navbar-mobile-version {
+    display: none;
+}
+.icon {
+    display: none;
+}

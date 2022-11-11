@@ -1,0 +1,21 @@
+
+@use '../fontColor' as c;
+
+
+@mixin centerDiv($justify: center, $align: center, $flex: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $flex;
+}
+
+@mixin settingFont($size: 20px, $fColor: black) {
+    font-size: $size;
+    font-family: c.$font;
+    font-weight: 600;
+    color: $fColor;
+}
+@mixin heightDiv(){
+    height: 300px;
+}
+

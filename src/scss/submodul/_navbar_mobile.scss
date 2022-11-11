@@ -1,0 +1,91 @@
+@use './mixinModule/mixin' as m;
+@use './fontColor' as c;
+
+
+@media screen and (max-width:600px) {
+    .nav-default {
+        @include m.centerDiv(center, center)
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    .navbar{
+        position:sticky;
+        top: 0;
+        .wrapper-navbar-default{
+            padding: 3px;
+        background-color: c.$color2;
+        background-color: white;
+        .nav-default {
+            @include m.centerDiv(space-between);
+            border-radius: 20px;
+            box-shadow: 3px 3px 2px gray;
+            margin: auto;
+            width: 70%;
+            background-color: white; 
+            transition: all 0.5s ease-in-out;
+            .ul-default-version {
+                display: none;
+            }
+        }
+    }
+    }
+
+    .navbar-mobile-version {
+        display: block;
+        background-color: white;
+        padding: 5px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        margin-top: 200px;
+        transition: all 0.3s ease-in-out;
+
+        ul {
+            @include m.centerDiv(space-around);
+            padding: 10px;
+            // background-color: tomato;
+            flex-wrap: wrap;
+            cursor: pointer;
+
+            li {
+                list-style-type: none;
+                // background-color: white;     
+                // border-radius: 10px 10px 10px 10px;  
+                // border-radius: 50%;  
+                // -webkit-border-radius: 100px;
+                // -webkit-border-top-right-radius: 1px;
+                // -moz-border-radius: 100px;
+                // -moz-border-radius-topright: 1px;
+                // border-radius: 100px;
+                // border-top-right-radius: 1px; 
+                padding: 3px;
+                width: 75px;
+
+                // box-shadow: 2px 2px 5px black; 
+                // transition: all 0.3s ease-in-out;
+                &:active {
+                    transform: scale(0.95);
+                }
+
+                a {
+                    text-decoration: none;
+                    height: max-content;
+                    @include m.centerDiv(center, center, column);
+
+                    // background-color: lightgreen;
+                    // text-shadow: 2px 2px 2px black;
+                    span {
+                        // font-size: rem;
+                        font-size: 25px;
+                        color: slateblue;
+                    }
+
+                    .title-icon {
+                        @include m.settingFont(10px, black);
+                    }
+                }
+            }
+        }
+    }
+}
