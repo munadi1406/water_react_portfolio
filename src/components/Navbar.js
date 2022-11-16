@@ -1,7 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "https://kit.fontawesome.com/6b4714a33f.js";
-import "./css/style.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDroplet } from '@fortawesome/free-solid-svg-icons'
+
 
 const Navbar = () => {
   let darkMode = 0;
@@ -54,7 +55,7 @@ const Navbar = () => {
     <div className="wrapper-navbar-default">
       <nav className="nav-default">
         <div className="navbar-brand">
-          <i className="fa-solid fa-droplet"></i>
+        <i><FontAwesomeIcon icon={faDroplet} /></i>
           <div className="navbar-title">Water</div>
         </div>
         <ul className="ul-default-version">

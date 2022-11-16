@@ -1,14 +1,9 @@
-import React from "react";
-import './style.css'
+import React from 'react'
 
 const Home = () => {
   return (
-    <div>
-     
-      <h1>ini adalah halaman home</h1>
-        
-    </div>
-  );
-};
+    <div>Home</div>
+  )
+}
 
-export default Home;
+export default Home

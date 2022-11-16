@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Nunito+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
 *,
 html,
 body {
@@ -161,6 +166,9 @@ body ::selection {
   }
   .navbar .wrapper-navbar-default .nav-default .ul-default-version {
     display: none;
+  }
+  .navbar .wrapper-navbar-default .nav-default .navbar-title {
+    font-size: 16px;
   }
   .navbar-mobile-version {
     display: block;
@@ -354,4 +362,4 @@ body ::selection {
   color: white !important;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */
