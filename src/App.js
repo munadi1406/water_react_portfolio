@@ -5,8 +5,8 @@ import Profile from "./components/Profile"
 import Project from "./components/Project"
 import Contact from "./components/Contact"
 import {BrowserRouter as Router, Routes,Route} from "react-router-dom"
-// import './components/css/main.css'
-import './scss/submodul/_navbar_default.scss'
+import './components/css/main.css'
+// import './scss/submodul/_navbar_default.scss'
 
 
 

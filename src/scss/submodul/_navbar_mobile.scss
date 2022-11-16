@@ -22,17 +22,27 @@
             box-shadow: 3px 3px 2px gray;
             margin: auto;
             width: 70%;
+            height: 50px;
             background-color: white; 
             transition: all 0.5s ease-in-out;
             .ul-default-version {
                 display: none;
             }
+            .navbar-brand{
+                @include m.centerDiv(space-evenly);
+                i{
+                    font-size: 24px;
+                }
+            }
             .navbar-title {
                 font-size: 16px;
             }
+            .color-title{
+                font-size: 14px;
+            }
         }
     }
-    }
+    } 
 
     .navbar-mobile-version {
         display: block;
