@@ -1,10 +1,5 @@
 const FecthingData = (props) => {
-  const container = document.querySelectorAll(".container-product");
-  const wrapper = document.querySelector(".wrapper");
-
-  // container.forEach(e=>{
-  //   wrapper.appendChild(e);
-  // })
+ 
 
   return (
     <div className="card">
