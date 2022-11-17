@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Contact = () => {
+const Contact = (props) => {
+  
   return (
     <div>
-      <h1>Ini adalah halaman contact</h1>
+      <h1>{props.tes}</h1>
     </div>
   )
 }

@@ -1,16 +1,21 @@
-import { Suspense } from "react"
+import { Suspense} from "react"
 import Navbar from "./components/Navbar"
 import Home from "./components/Home"
 import Profile from "./components/Profile"
 import Project from "./components/Project"
 import Contact from "./components/Contact"
+import FecthingData from "./components/FecthingData"
 import {BrowserRouter as Router, Routes,Route} from "react-router-dom"
 import './components/css/main.css'
-// import './scss/submodul/_navbar_default.scss'
+
+
 
 
 
 function App() {
+  
+
+
   return (
     <div>
       <Router>
@@ -18,9 +23,10 @@ function App() {
       <Suspense fallback={<h1>Loading.....</h1>}>
         <Routes>
             <Route path="/" exact="true" element={<Home/>}/>
-            <Route path="profile" element={<Profile/>}/>
+            <Route path="profile" element={<Profile bahlul="ente bahlul"/>}/>
             <Route path="project" element={<Project/>}/>
             <Route path="contact" element={<Contact/>}/>
+            <Route path="tes" element={<FecthingData/>}/>
         </Routes>
       </Suspense>
       </Router>

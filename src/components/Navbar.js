@@ -74,9 +74,9 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="link-default">
-            <NavLink to={"#"}>
+            <NavLink to={"Profile"}>
               <span className="sDefault" data-hover="Resume">
-                Resume
+                Profile
               </span>
             </NavLink>
           </li>
@@ -112,9 +112,9 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="link">
-            <NavLink to={"/resume"} className="a">
+            <NavLink to={"/profile"} className="a">
               <span className="material-symbols-outlined">library_books</span>
-              <span className="title-icon">Resume</span>
+              <span className="title-icon">Profile</span>
             </NavLink>
           </li>
           <li className="link">
