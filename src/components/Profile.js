@@ -9,7 +9,7 @@ import axios from 'axios';
 const Profile = () => {
   const [data,setData] = useState([]);
   useEffect(()=>{
-      axios.get('https://dummyjson.com/products')
+      axios.get('https://dummyjson.com/products?limit=100')
       .then(res => {
         setData(res.data.products)
       })
