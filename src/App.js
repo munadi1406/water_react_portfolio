@@ -23,7 +23,7 @@ function App() {
       <Suspense fallback={<h1>Loading.....</h1>}>
         <Routes>
             <Route path="/" exact="true" element={<Home/>}/>
-            <Route path="profile" element={<Profile bahlul="ente bahlul"/>}/>
+            <Route path="profile" element={<Profile />}/>
             <Route path="project" element={<Project/>}/>
             <Route path="contact" element={<Contact/>}/>
             <Route path="tes" element={<FecthingData/>}/>

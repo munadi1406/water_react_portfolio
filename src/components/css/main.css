@@ -373,4 +373,61 @@ body ::selection {
 
 .dark-color {
   color: white !important;
+}
+
+.container-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 90vw;
+  gap: 10px;
+}
+.container-product .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 10em;
+  min-height: 250px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+}
+.container-product .card h1 {
+  font-size: 14px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+.container-product .card .stock {
+  font-size: 14px;
+  font-family: "Nunito Sans", sans-serif;
+}
+.container-product .card .price {
+  font-size: 14px;
+  font-family: "Nunito Sans", sans-serif;
+}
+.container-product .card .wrapper-button {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.container-product .card .wrapper-button .order {
+  padding: 8px;
+  border: none;
+  background-color: lightblue;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+}
+.container-product .card .wrapper-button .desc {
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  padding: 8px;
+  border: none;
+  background-color: salmon;
 }/*# sourceMappingURL=main.css.map */
