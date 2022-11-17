@@ -1,17 +1,20 @@
 import {useState,useEffect} from 'react'
 import FecthingData from './FecthingData';
+import axios from 'axios';
 
 
 
 
 
-const Profile = (props) => {
+const Profile = () => {
   const [data,setData] = useState([]);
   useEffect(()=>{
-      fetch('https://dummyjson.com/products')
-      .then(response => response.json())
-      .then(res =>{
-          setData(res.products)
+      axios.get('https://dummyjson.com/products')
+      .then(res => {
+        setData(res.data.products)
+      })
+      .catch(err => {
+        throw err
       })
   },[])
 return (
