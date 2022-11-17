@@ -12,10 +12,19 @@ const FecthingData = (props) => {
       <img src={props.img} alt={props.alt} width={100} />
       <div className="stock">{props.stock}</div>
       <div className="price">{props.price}</div>
-      <div className="wrapper-button">
-        <button className="order">Order</button>
+     
+
+      {
+        props.val === "true" ?
+          <div className="wrapper-button">
+          <button className="order">Order</button>
         <button className="desc">Desc</button>
-      </div>
+        </div>
+        : <div>Loading</div>
+        }
+      
+
+      
     </div>
   );
 };

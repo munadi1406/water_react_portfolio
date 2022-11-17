@@ -7,9 +7,9 @@
     flex-wrap:wrap ;
     margin: auto;
     width:90vw;
+    min-height: 100vh;
     gap: 10px;
     .card{
-
         @include m.centerDiv(space-between,center,column);
         width: 10em;
         min-height: 250px;
