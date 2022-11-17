@@ -1,6 +1,4 @@
 const FecthingData = (props) => {
- 
-
   return (
     <div className="card">
       <h1>{props.title}</h1>
@@ -10,12 +8,12 @@ const FecthingData = (props) => {
      
 
       {
-        props.val === "true" ?
+        props.validasi === true ?
           <div className="wrapper-button">
           <button className="order">Order</button>
-        <button className="desc">Desc</button>
+          <button className="desc">Desc</button>
         </div>
-        : <div>Loading</div>
+        :<div>Loading...</div>
         }
       
 

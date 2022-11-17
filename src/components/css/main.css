@@ -384,6 +384,7 @@ body ::selection {
   margin: auto;
   width: 90vw;
   min-height: 100vh;
+  padding: 20px 0px 20px 0px;
   gap: 10px;
 }
 .container-product .card {
@@ -396,6 +397,9 @@ body ::selection {
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 10px;
+}
+.container-product .card:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .container-product .card h1 {
   font-size: 14px;

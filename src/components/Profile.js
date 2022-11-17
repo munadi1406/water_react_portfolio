@@ -19,14 +19,14 @@ const Profile = () => {
         throw err
       })
   },[])
+  const val = true;
 return (
   <div className='container-product'>
         {data.length > 0 ? data.map(e=>{
               return(
-              <FecthingData key={e.id} title={e.title} img={e.images[0]} alt={e.thumbnail[0]} price={`Pricce : $.${e.stock}`} stock={`Stock : ${e.stock}`}/>
+              <FecthingData key={e.id} title={e.title} img={e.images[0]} alt={e.thumbnail[0]} price={`Pricce : $.${e.stock}`} stock={`Stock : ${e.stock}`} validasi={val}/>
               )
-          })
-          : <FecthingData title="loading..."/>
+          }): <FecthingData title="loading..."/>
         }
   </div>
 )
