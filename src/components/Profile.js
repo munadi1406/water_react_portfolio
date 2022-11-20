@@ -2,17 +2,12 @@ import {useState,useEffect} from 'react'
 import FecthingData from './FecthingData';
 import axios from 'axios';
 
-
-
-
-
 const Profile = () => {
   const [data,setData] = useState([]);
+
   useEffect(()=>{
-    
-      axios.get('https://dummyjson.com/products?limit=100')
+      axios.get(`${process.env.REACT_APP_API}/products?limit=100`)
       .then(res => {
-        console.log(res)
         setData(res.data.products)
       })
       .catch(err => {
